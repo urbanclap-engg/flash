@@ -1,12 +1,18 @@
 {
   "name": "@uc-engg/flash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A generic caching layer",
   "main": "./dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:urbanclap-engg/flash.git"
+  },
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' nyc mocha -r ts-node/register 'test/**/*.ts'",
-    "prepare": "rm -rf dist && npx tsc",
-    "prepublishOnly": "npx tsc"
+    "prepare": "rm -rf dist && npx tsc"
   },
   "dependencies": {
     "@uc-engg/armor": "1.0.0",
@@ -19,7 +25,7 @@
     "nyc": "^15.1.0",
     "snappy": "6.2.3",
     "ts-node": "^10.9.1",
-    "typescript": "^4.9.3"
+    "typescript": "~4.5.0"
   },
   "devDependencies": {
     "@types/ioredis": "^5.0.0",
@@ -41,6 +47,6 @@
       "pre-commit": "npm run test;"
     }
   },
-  "author": "adityachowdhry@urbanclap.com",
-  "license": "ISC"
+  "author": "UrbanClap Technologies India Pvt. Ltd.",
+  "license": "MIT"
 }
